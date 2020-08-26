@@ -8,8 +8,6 @@
 [downloads-image]: https://img.shields.io/npm/dm/jstyling.svg
 [downloads-url]: https://npmjs.org/package/jstyling
 
-JStyling is a JavaScript Styling library to style elements without having to write gibberish doc.style.something or having to frankenstein CSS with JS
-
 ### What is this?
 
 This is a library which can do Styling totally inside of JavaScript. Just like you would do inside of a CSS file. Without having to make everything look gibberish inside you JS file.
