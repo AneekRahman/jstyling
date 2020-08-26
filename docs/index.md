@@ -1,37 +1,81 @@
-## Welcome to GitHub Pages
+# JStyling
 
-You can use the [editor on GitHub](https://github.com/AneekRahman/jstyling/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[npm-image]: https://img.shields.io/npm/v/jstyling.svg
+[npm-url]: https://npmjs.org/package/jstyling
+[downloads-image]: https://img.shields.io/npm/dm/jstyling.svg
+[downloads-url]: https://npmjs.org/package/jstyling
 
-### Markdown
+### What is this?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This is a library which can do Styling totally inside of JavaScript. Just like you would do inside of a CSS file. Without having to make everything look gibberish inside you JS file.
 
-```markdown
-Syntax highlighted code block
+Like this:
 
-# Header 1
-## Header 2
-### Header 3
+```
+JS("body").style({
+  backgroundColor: "rgba(0,0,0,0.8)",
+  paddingBottom: "20%",
+});
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+JS("h1").style({
+  color: "#ffe570",
+  fontFamily: "sans-serif",
+});
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<p style="color: rgba(0,0,0,0.4)">Also help the development by reporting any bugs. Feel free to contribute to this project. Thanks ❤</p>
 
-### Jekyll Themes
+### Benefits
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AneekRahman/jstyling/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- Extremely lightweight: Only 500B (271B gzipped! You can't go lower than this!)
+- No dependency: It's all Pure javascript
+- Makes your code readable
 
-### Support or Contact
+### CDN
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```
+<script src="https://unpkg.com/jstyling/src/jstyling.js">
+```
+
+And then use it like this:
+
+```
+JS("h4").style({
+  color: "pink",
+  fontFamily: "sans-serif",
+});
+```
+
+### NPM Installation
+
+```
+npm i jstyling
+```
+
+And then use it like this:
+
+```
+import JS from 'jstyling';
+
+JS("div").style({
+  backgroundImage: "url(...)",
+  backgroundPosition: "center"
+});
+```
+
+### Options
+
+```
+JS("any-tag-here").style({
+  // Your styles go here!
+  fontFamily: "",
+  fontSize: "",
+  color: "",
+  // ...
+  // ...
+  // Remember, it's all camelCase
+});
+```
