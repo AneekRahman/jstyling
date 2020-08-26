@@ -17,3 +17,5 @@ JSConstructor.prototype.style = function (styles) {
 const JS = function (identifier) {
   return new JSConstructor(identifier);
 };
+
+export default JS;
