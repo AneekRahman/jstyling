@@ -19,6 +19,7 @@ JS("body").style({
   backgroundColor: "rgba(0,0,0,0.8)",
   paddingBottom: "20%",
 });
+
 JS("h1").style({
   color: "#ffe570",
   fontFamily: "sans-serif",
@@ -57,7 +58,7 @@ npm i jstyling
 And then use it like this:
 
 ```
-import LazLoad from 'lazload';
+import JS from 'jstyling';
 
 JS("div").style({
   backgroundImage: "url(...)",
