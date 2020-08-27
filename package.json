@@ -1,6 +1,6 @@
 {
   "name": "jstyling",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "JStyling is a JavaScript UI library to style elements in a very good looking syntax, easy to manage. Inspired by the style objects you can pass into React JSX elements.",
   "main": "src/index.js",
   "directories": {
