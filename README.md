@@ -1,4 +1,4 @@
-<img src="./docs/jstyling-logo.svg" height="80">
+# <img src="./docs/jstyling-logo.svg" height="120">
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -8,7 +8,7 @@
 [downloads-image]: https://img.shields.io/npm/dm/jstyling.svg
 [downloads-url]: https://npmjs.org/package/jstyling
 
-# What is this?
+## What is this?
 
 This is a library which can do Styling totally inside of JavaScript. React like object passing in as the styling. No more having to make everything look gibberish inside you JS file to update or set the styling.
 
@@ -34,26 +34,26 @@ JS(".another").style(style);
 
 <p style="color: rgba(0,0,0,0.4)">Also help the development by reporting any bugs. Feel free to contribute to this project. Thanks ❤</p>
 
-# Benefits
+## Benefits
 
 - Easy and readable syntax
 - JavaScript + CSS alteration together
 - Extremely lightweight: Only 1.2kB (500B gzipped!)
 - Zero dependencies
 
-# CDN
+## CDN
 
 ```
 <script src="https://unpkg.com/jstyling/src/jstyling.js">
 ```
 
-# NPM Installation
+## NPM Installation
 
 ```
 npm i jstyling
 ```
 
-# Usage
+## Usage
 
 ```
 
@@ -109,7 +109,7 @@ document.querySelector("button")
 
 ```
 
-# Options
+## Options
 
 ```
 JS(indentifier).style({
@@ -127,6 +127,6 @@ JS(indentifier).style({
 - Style object: [object]
   - styleName: "string"
 
-##### The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options:
+### The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options:
 
 [w3schools.com](https://www.w3schools.com/jsref/dom_obj_style.asp)
