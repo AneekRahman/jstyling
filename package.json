@@ -1,6 +1,6 @@
 {
   "name": "jstyling",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "JStyling is a JavaScript Styling library to style elements without having to write gibberish docNode.style.something or having to frankenstein CSS with JS",
   "main": "src/index.js",
   "directories": {

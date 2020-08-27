@@ -1,4 +1,4 @@
-# JStyling
+<img src="./docs/jstyling-logo.svg" height="80">
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
