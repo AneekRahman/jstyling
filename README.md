@@ -45,7 +45,7 @@ document
 
 # Example
 
-<img src="./docs/example.gif" style="max-width: 350px">
+<img src="./docs/example.gif" width="350px">
 
 Code for this inside `example/client.js` (Check out how simple it is!)
 
