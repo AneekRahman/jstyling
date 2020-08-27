@@ -1,7 +1,7 @@
 {
   "name": "jstyling",
   "version": "1.0.6",
-  "description": "JStyling is a JavaScript Styling library to style elements without having to write gibberish docNode.style.something or having to frankenstein CSS with JS",
+  "description": "JStyling is a JavaScript UI library to style elements in a very good looking syntax, easy to manage. Inspired by the style objects you can pass into React JSX elements.",
   "main": "src/index.js",
   "directories": {
     "src": "src"
@@ -18,10 +18,16 @@
     "url": "git+https://github.com/AneekRahman/jstyling.git"
   },
   "keywords": [
-    "Javascript",
-    "Styling",
-    "Css",
-    "JS",
+    "ui",
+    "ux",
+    "library",
+    "javascript",
+    "styling",
+    "css",
+    "js",
+    "syntax",
+    "good",
+    "looking",
     "script",
     "style",
     "script-styling",
