@@ -1,4 +1,4 @@
-<img src="./jstyling-logo.svg" height="80">
+# <img src="./jstyling-logo.svg" height="120">
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -8,52 +8,69 @@
 [downloads-image]: https://img.shields.io/npm/dm/jstyling.svg
 [downloads-url]: https://npmjs.org/package/jstyling
 
-### What is this?
+# What is this?
 
-This is a library which can do Styling totally inside of JavaScript. React like object passing in as the styling. No more having to make everything look gibberish inside you JS file to update or set the styling.
+This is a library which can do Styling totally inside of JavaScript. React.JS inspired object passing in as the styling. No more having to make everything look gibberish inside your JS file to update or set the styling.
 
 The power of JavaScript and CSS, In one file!
 
 Like this:
 
 ```
-// Create a style object or directly pass it in
-var style = {
-  height: "400px",
-  backgroundColor: "rgb(100, 150, 200)",
-  transform: "translateX(50px)"
-}
+// Style it! Keep it Neat & Clean
+JS("button").style({
+  backgroundColor: "transparent",
+  backgroundImage: "linear-gradient(rgba(0,0,0,.02), rgba(0,0,0,.03))",
+  border: "1px solid rgba(0,0,0,.05)",
+  color: "#006edb",
+  padding: ".5em 1.6em",
+  borderRadius: ".5em",
+  boxShadow: "0px 1px 3px rgba(0,0,0,0.04)",
+});
 
-// Apply styles to all div and #hero
-JS("div, #hero").style(style);
+// Again style it on click!
+document
+  .querySelector("button")
+  .addEventListener("mousedown", () => {
 
-// Reapply all styles with a twist! To another element!
-style.opacity = ".5";
-JS(".another").style(style);
+    JS("button").style({
+      backgroundColor: "#006edb",
+      color: "white",
+    });
+
+});
 ```
 
 <p style="color: rgba(0,0,0,0.4)">Also help the development by reporting any bugs. Feel free to contribute to this project. Thanks ❤</p>
 
-### Benefits
+# Example
+
+![JStyling demo][example]
+
+[example]: ./example.gif "JStyling demo"
+
+Code for this is inside `example/client.js` (Check out how simple it is!)
+
+# Benefits
 
 - Easy and readable syntax
 - JavaScript + CSS alteration together
 - Extremely lightweight: Only 1.2kB (500B gzipped!)
 - Zero dependencies
 
-### CDN
+# CDN
 
 ```
 <script src="https://unpkg.com/jstyling/src/jstyling.js">
 ```
 
-### NPM Installation
+# NPM Installation
 
 ```
 npm i jstyling
 ```
 
-### Usage
+# Usage
 
 ```
 
@@ -64,52 +81,44 @@ var style = {
   transform: "rotate(45deg)",
 }
 
-// ---- Select and Style!
+// Select using any of the css selectors!
 
 JS("h4").style(style);
 JS("#thebestdiv").style(style);
+JS("ul li").style(style); // Children of ul
 
-style.transform = "rotate(360deg)"; // -- These changes will only affect later JStyled elements from here
+// It's a JS object, use it as you wish
+style.transform = "rotate(360deg)";
 
-JS(".weirdclass").style(style);
-JS("ul li").style(style); // -- Children of ul
-JS("div .someClass").style(style); // -- Only .someClass children of div
-
-const element = document.querySelector("p"); // -- Also you can pass in a element as well
+// Also DOMElements work!
+const element = document.querySelector("p");
 JS(element).style(style);
 ```
 
 Because it is javascript, you can do all sorts of things!
 
 ```
-var style = {
+JS("#hero").style({
   width: "100%",
   height: "500px",
   backgroundColor: "orange",
   transition: "1s",
-}
-JS("#hero").style(style);
+});
 
-setTimeout(()=>{
-
-  style.backgroundColor = "blue";
-  style.height = "1000px",
-  JS("#hero").style(style);
-
-}, 2000);
-
-// A click callback
-document.querySelector("button")
+// Animate it on any events!
+document
+  .querySelector("button")
   .addEventListener("mousedown", () => {
 
-  style.transform = "translateX(30px)";
-  JS("#hero").style(style);
+  JS("#hero").style({
+    style.transform = "translateX(30px)"
+  });
 
 });
 
 ```
 
-### Options
+# Options
 
 ```
 JS(indentifier).style({
@@ -126,5 +135,8 @@ JS(indentifier).style({
   - The element you want to style
 - Style object: [object]
   - styleName: "string"
+    All of the JavaScript supported options!
 
-##### The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options: [w3schools.com](https://www.w3schools.com/jsref/dom_obj_style.asp)
+##### The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options:
+
+[w3schools.com](https://www.w3schools.com/jsref/dom_obj_style.asp)
