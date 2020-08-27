@@ -36,6 +36,9 @@ JSConstructor.prototype.style = function (styles = {}) {
   });
 };
 
+// Todo finish this
+JSConstructor.prototype.animate = function (styles = {}) {};
+
 const JS = function (identifier) {
   return new JSConstructor(identifier);
 };
