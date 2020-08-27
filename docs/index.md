@@ -10,43 +10,41 @@
 
 ### What is this?
 
-This is a library which can do Styling totally inside of JavaScript. Just like you would do inside of a CSS file. Without having to make everything look gibberish inside you JS file.
+This is a library which can do Styling totally inside of JavaScript. React like object passing in as the styling. No more having to make everything look gibberish inside you JS file to update or set the styling.
+
+The power of JavaScript and CSS, In one file!
 
 Like this:
 
 ```
-JS("body").style({
-  backgroundColor: "rgba(0,0,0,0.8)",
-  paddingBottom: "20%",
-});
+// Create a style object or directly pass it in
+var style = {
+  height: "400px",
+  backgroundColor: "rgb(100, 150, 200)",
+  transform: "translateX(50px)"
+}
 
-JS("h1").style({
-  color: "#ffe570",
-  fontFamily: "sans-serif",
-});
+// Apply styles to all div and #hero
+JS("div, #hero").style(style);
+
+// Reapply all styles with a twist! To another element!
+style.opacity = ".5";
+JS(".another").style(style);
 ```
 
 <p style="color: rgba(0,0,0,0.4)">Also help the development by reporting any bugs. Feel free to contribute to this project. Thanks ❤</p>
 
 ### Benefits
 
-- Extremely lightweight: Only 500B (271B gzipped! You can't go lower than this!)
-- No dependency: It's all Pure javascript
-- Makes your code readable
+- Easy and readable syntax
+- JavaScript + CSS alteration together
+- Extremely lightweight: Only 1.2kB (500B gzipped!)
+- Zero dependencies
 
 ### CDN
 
 ```
 <script src="https://unpkg.com/jstyling/src/jstyling.js">
-```
-
-And then use it like this:
-
-```
-JS("h4").style({
-  color: "pink",
-  fontFamily: "sans-serif",
-});
 ```
 
 ### NPM Installation
@@ -55,27 +53,78 @@ JS("h4").style({
 npm i jstyling
 ```
 
-And then use it like this:
+### Usage
 
 ```
-import JS from 'jstyling';
 
-JS("div").style({
-  backgroundImage: "url(...)",
-  backgroundPosition: "center"
+var style = {
+  color: "pink",
+  fontFamily: "sans-serif",
+  fontSize: "1.5em",
+  transform: "rotate(45deg)",
+}
+
+// ---- Select and Style!
+
+JS("h4").style(style);
+JS("#thebestdiv").style(style);
+
+style.transform = "rotate(360deg)"; // -- These changes will only affect later JStyled elements from here
+
+JS(".weirdclass").style(style);
+JS("ul li").style(style); // -- Children of ul
+JS("div .someClass").style(style); // -- Only .someClass children of div
+
+const element = document.querySelector("p"); // -- Also you can pass in a element as well
+JS(element).style(style);
+```
+
+Because it is javascript, you can do all sorts of things!
+
+```
+var style = {
+  width: "100%",
+  height: "500px",
+  backgroundColor: "orange",
+  transition: "1s",
+}
+JS("#hero").style(style);
+
+setTimeout(()=>{
+
+  style.backgroundColor = "blue";
+  style.height = "1000px",
+  JS("#hero").style(style);
+
+}, 2000);
+
+// A click callback
+document.querySelector("button")
+  .addEventListener("mousedown", () => {
+
+  style.transform = "translateX(30px)";
+  JS("#hero").style(style);
+
 });
+
 ```
 
 ### Options
 
 ```
-JS("any-tag-here").style({
+JS(indentifier).style({
   // Your styles go here!
-  fontFamily: "",
+  maxHeight: "",
   fontSize: "",
   color: "",
-  // ...
   // ...
   // Remember, it's all camelCase
 });
 ```
+
+- indentifier: [string] or DOMElement
+  - The element you want to style
+- Style object: [object]
+  - styleName: "string"
+
+##### The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options: [w3schools.com](https://www.w3schools.com/jsref/dom_obj_style.asp)
