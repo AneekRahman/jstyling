@@ -1,6 +1,6 @@
 {
   "name": "jstyling",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "JStyling is a JavaScript Styling library to style elements without having to write gibberish docNode.style.something or having to frankenstein CSS with JS",
   "main": "src/index.js",
   "directories": {
@@ -23,12 +23,16 @@
     "Css",
     "JS",
     "script",
-    "style"
+    "style",
+    "script-styling",
+    "js-css",
+    "react-like-css",
+    "inline-css-javascript"
   ],
   "author": "Muhammad Aneek Rahman",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AneekRahman/jstyling/issues"
   },
-  "homepage": "https://github.com/AneekRahman/jstyling#readme"
+  "homepage": "https://aneekrahman.github.io/jstyling/"
 }

@@ -15,11 +15,6 @@ This is a library which can do Styling totally inside of JavaScript. Just like y
 Like this:
 
 ```
-JS("body").style({
-  backgroundColor: "rgba(0,0,0,0.8)",
-  paddingBottom: "20%",
-});
-
 JS("h1").style({
   color: "#ffe570",
   fontFamily: "sans-serif",
@@ -30,23 +25,15 @@ JS("h1").style({
 
 ### Benefits
 
-- Extremely lightweight: Only 500B (271B gzipped! You can't go lower than this!)
-- No dependency: It's all Pure javascript
-- Makes your code readable
+- Easy and readable syntax
+- Just one JavaScript file. You won't need css
+- Extremely lightweight: Only 500B (271B gzipped!)
+- Zero dependencies
 
 ### CDN
 
 ```
 <script src="https://unpkg.com/jstyling/src/jstyling.js">
-```
-
-And then use it like this:
-
-```
-JS("h4").style({
-  color: "pink",
-  fontFamily: "sans-serif",
-});
 ```
 
 ### NPM Installation
@@ -55,21 +42,25 @@ JS("h4").style({
 npm i jstyling
 ```
 
-And then use it like this:
+### Usage
 
 ```
-import JS from 'jstyling';
+JS("h4").style({
+  color: "pink",
+  fontFamily: "sans-serif",
+});
 
-JS("div").style({
-  backgroundImage: "url(...)",
-  backgroundPosition: "center"
+// Also you can pass in a raw DOMElement
+const element = document.querySelector("h4");
+JS(element).style({
+  color: "pink",
 });
 ```
 
 ### Options
 
 ```
-JS("any-tag-here").style({
+JS(indentifier).style({
   // Your styles go here!
   fontFamily: "",
   fontSize: "",
@@ -79,3 +70,8 @@ JS("any-tag-here").style({
   // Remember, it's all camelCase
 });
 ```
+
+- indentifier: [string] or DOMElement
+  - The element you want to style
+
+##### The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options: [w3schools.com](https://www.w3schools.com/jsref/dom_obj_style.asp)

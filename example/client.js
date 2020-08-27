@@ -11,7 +11,7 @@ JS("h3").style({
   padding: ".4em",
 });
 
-JS("h4").style({
+const element = document.querySelector("h4");
+JS(element).style({
   color: "pink",
-  fontFamily: "sans-serif",
 });
