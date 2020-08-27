@@ -45,9 +45,7 @@ document
 
 # Example
 
-![JStyling demo][example]
-
-[example]: ./example.gif "JStyling demo"
+<img src="./example.gif" style="max-width: 350px">
 
 Code for this is inside `example/client.js` (Check out how simple it is!)
 
