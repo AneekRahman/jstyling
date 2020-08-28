@@ -22,22 +22,25 @@ JSConstructor.prototype.style = function (styles = {}) {
   const styleKeys = Object.keys(styles);
   // No styles found
   if (!styleKeys || styleKeys.length === 0) {
-    console.error("JStyling: No styles found to implement");
+    console.error(
+      "JStyling: No styles found to implement for: " +
+        this.elements[0].tagName.toLowerCase()
+    );
     return;
   }
 
-  document.querySelector("body").style.boxSizing = "border-box";
-  document.querySelector("body").style.margin = "0";
-
-  this.elements.forEach((element) => {
+  if (this.elements.length === 1) {
     styleKeys.forEach((styleName) => {
-      element.style[styleName] = styles[styleName];
+      this.elements[0].style[styleName] = styles[styleName];
     });
-  });
+  } else if (this.elements.length > 1) {
+    this.elements.forEach((element) => {
+      styleKeys.forEach((styleName) => {
+        element.style[styleName] = styles[styleName];
+      });
+    });
+  }
 };
-
-// Todo finish this
-JSConstructor.prototype.animate = function (styles = {}) {};
 
 const JS = function (identifier) {
   return new JSConstructor(identifier);
