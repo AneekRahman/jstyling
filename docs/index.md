@@ -12,7 +12,7 @@
 
 # What is this?
 
-#### You won't ever need a CSS file every again! Why not just do everything in JavaScript!
+<b>You won't ever need a CSS file every again! Why not just do everything in JavaScript!</b>
 
 This is a library which can do Styling totally inside of JavaScript.
 
@@ -51,7 +51,7 @@ JS("button").style({
 # CDN
 
 ```
-<script src="https://unpkg.com/jstyling@1.0.11/src/jstyling.js">
+<script src="https://unpkg.com/jstyling@1.0.12/src/jstyling.js">
 ```
 
 # NPM Installation
@@ -92,6 +92,7 @@ JS(element).style(style);
 Reapply new styles with callbacks:
 
 ```
+// Set a transition to get the animation effect!
 JS("#hero").style({
   width: "100%",
   height: "500px",
@@ -128,6 +129,6 @@ JS("indentifier").style({
   - styleName: "string"
     All of the JavaScript supported options!
 
-##### The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options:
+<b>The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options:<b>
 
 [w3schools.com](https://www.w3schools.com/jsref/dom_obj_style.asp)
