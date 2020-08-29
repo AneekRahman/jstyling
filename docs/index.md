@@ -1,6 +1,6 @@
 ##### <img src="./jstyling-logo.svg" height="120">
 
-###### _- I don't hate css files, but you just won't need them anymore._
+<b> _- I don't hate css files, but you just won't need them anymore._ </b>
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -10,7 +10,7 @@
 [downloads-image]: https://img.shields.io/npm/dm/jstyling.svg
 [downloads-url]: https://npmjs.org/package/jstyling
 
-# What is this?
+# Intro
 
 <b>You won't ever need a CSS file every again! Why not just do everything in JavaScript!</b>
 
@@ -19,13 +19,18 @@ This is a library which can do Styling totally inside of JavaScript.
 React.JS inspired object passing in as the styling, and CSS like element selection!
 No more having to make everything look gibberish inside your JS file for styling.
 
+# What's new in v1.0.13
+
+- Ability to animate using `.animate()`
+- Write raw CSS in JS using `.setStyle()`
+
 # Example
 
-<img src="./example.gif" width="350px">
+<img src="./example.gif" width="400px">
 
 Code for this inside `example/client.js` (Check out how simple it is!)
 
-# Code Example
+# Intro Code Example
 
 ```
 // Style it! Keep it Neat & Clean
@@ -45,7 +50,7 @@ JS("button").style({
 # Benefits
 
 - Easy and readable syntax
-- IT'S JUST ONE JS FILE
+- IT'S JUST ONE JS FILE, NO CSS
 - Extremely lightweight: Only 1.2kB (500B gzipped!)
 
 # CDN
@@ -60,9 +65,11 @@ JS("button").style({
 npm i jstyling
 ```
 
-# Usage
+# Docs
 
-Set the styling:
+## .style()
+
+Set the styling using this method:
 
 ```
 // You pass in a JavaScript Object to .style({})
@@ -89,7 +96,7 @@ const element = document.querySelector("p");
 JS(element).style(style);
 ```
 
-Reapply new styles with callbacks:
+Reapply new styles on callbacks:
 
 ```
 // Set a transition to get the animation effect!
@@ -97,7 +104,6 @@ JS("#hero").style({
   width: "100%",
   height: "500px",
   backgroundColor: "orange",
-  transition: "1s",
 });
 
 document
@@ -110,10 +116,49 @@ document
 });
 ```
 
-# Options
+## .animate()
+
+If you want to animate an element, you should use this method.
 
 ```
-JS("indentifier").style({
+JS("#button3").animate({
+  styles: {
+    backgroundColor: "#006edb",
+    height: "500px",
+  },
+  duration: 1000,
+  ease: "ease-in-out",
+});
+```
+
+`.animate()` takes in an `Object` with these parameters:
+
+1. `styles:` - Pass in a styling `Object` consisting all of your styles you want to animate in.
+2. `duration:` - Duration of the animation in `integer` miliseconds.
+3. `ease:` - The transition-timing-function easing as `string`. All of the CSS easing work
+
+## .setStyle()
+
+If you feel like you can't access anything from the JavaScript Style Object, you can always use this method to write the CSS, inside of JavaScript of course.
+
+```
+// Use backticks as they can give you multi-line strings!
+JS().setStyle(`
+  * {
+    font-family: Arial
+  }
+  h2::after{
+    content: "hello"
+  }
+`);
+```
+
+---
+
+# Styling Options
+
+```
+JS("#indentifier").style({
   // Your styles go here!
   maxHeight: "",
   fontSize: "",
@@ -122,12 +167,6 @@ JS("indentifier").style({
   // Remember, it's all camelCase
 });
 ```
-
-- indentifier: [string] or DOMElement
-  - The element you want to style
-- Style object: [object]
-  - styleName: "string"
-    All of the JavaScript supported options!
 
 <b>The full list of all the options are the same as vanilla javascript. You can follow this useful guide for all the possible options:<b>
 

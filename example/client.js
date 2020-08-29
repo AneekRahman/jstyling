@@ -52,10 +52,19 @@ document.querySelector("#button2").addEventListener("mousedown", () => {
 });
 
 document.querySelector("#button3").addEventListener("mousedown", () => {
-  JS("#button3").style({
-    transition: "1s",
-    fontSize: "2em",
-    backgroundColor: "#006edb",
-    color: "white",
+  JS("#button3").animate({
+    styles: {
+      fontSize: "2em",
+      backgroundColor: "#006edb",
+      color: "white",
+    },
+    duration: 1000,
+    ease: "ease-in-out",
   });
 });
+
+JS().setStyle(`
+* {
+  box-sizing: border-box;
+}
+`);
