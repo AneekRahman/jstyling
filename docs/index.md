@@ -56,7 +56,7 @@ JS("button").style({
 # CDN
 
 ```
-<script src="https://unpkg.com/jstyling@1.0.12/src/jstyling.js">
+<script src="https://unpkg.com/jstyling@1.0.13/src/jstyling.js">
 ```
 
 # NPM Installation
